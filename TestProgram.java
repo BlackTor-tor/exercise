@@ -20,7 +20,11 @@ public class TestProgram {
 //        new HomeWork01().homeWork01();
 
         //HomeWork02的实例
-//        new HomeWork02().homeWork02();
+/*        int[] testArr = {100, 10, 55, 8};
+        new HomeWork02().bubArr(testArr);
+        for (int i = 0; i < testArr.length; i++) {
+            System.out.print(testArr[i] + "\t");
+        }*/
 
         //Method的实例
 //        new Method().printHeart(20,20,"*");
@@ -39,7 +43,7 @@ public class TestProgram {
 //        System.out.println(new Calculator().add(1.5,5.0));
 
         //Constructor的实例
-        Constructor constructor = new Constructor();//输出：构造器执行了。
+//        Constructor constructor = new Constructor();//输出：构造器执行了。
 //        System.out.println("1" + c1.name);//女神
 //        Constructor c2 = new Constructor(20,150,45);
 

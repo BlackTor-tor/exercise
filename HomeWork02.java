@@ -52,9 +52,31 @@ public class HomeWork02 {
         }
         * */
 
-        /*7、冒泡排序
-        
-        * */
-        
         }
+
+        /*
+        *    7、冒泡排序
+        *
+        * 思路分析：1、传入一个数组，俩俩比较相邻的元素，如果大的，则往后放
+        * */
+
+        public void bubArr(int[] array) {
+            int temp = 0;
+            //遍历数组并交换元素
+            for (int i = 0; i < array.length - 1;i++) {//一共比较数组个数-1次，比如3个元素，那就比较2次
+                for (int j = 0;j < array.length - 1 - i;j++) {//比较完一次就减掉
+                    if (array[j] < array [j+1]) {//如果前面的数小于后面的数，就交换
+                        temp = array[j];
+                        array[j] = array[j+1];
+                        array[j+1] = temp;
+                    }
+                }
+
+
+                }
+
+
+        }
+
+
     }
