@@ -71,9 +71,7 @@ public class HomeWork02 {
                         array[j+1] = temp;
                     }
                 }
-
-
-                }
+            }
 
 
         }
