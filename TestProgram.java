@@ -47,6 +47,8 @@ public class TestProgram {
 //        System.out.println("1" + c1.name);//Å®Éñ
 //        Constructor c2 = new Constructor(20,150,45);
 
+        double[] testArrayMax = {10.0,3.0,100.0};
+        System.out.println(new HomeWork03.A01().max(testArrayMax));
 
     }
 }
