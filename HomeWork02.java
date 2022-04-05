@@ -65,7 +65,7 @@ public class HomeWork02 {
             //遍历数组并交换元素
             for (int i = 0; i < array.length - 1;i++) {//一共比较数组个数-1次，比如3个元素，那就比较2次
                 for (int j = 0;j < array.length - 1 - i;j++) {//比较完一次就减掉
-                    if (array[j] < array [j+1]) {//如果前面的数小于后面的数，就交换
+                    if (array[j] < array [j+1]) {//如果前面的数小于后面的数，就交换，从大到小排序
                         temp = array[j];
                         array[j] = array[j+1];
                         array[j+1] = temp;
