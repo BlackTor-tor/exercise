@@ -1,12 +1,6 @@
 public class HomeWork03 {
     /*
 
-    2、编写类A02，定义方法find，实现查找某字符串是否在数组中，并返回索引，如果找不到，返回-1
-
-    3、编写类book，定义方法updatePrice，实现更改某本书的价格。具体：如果价格>150,则更改为150，如果价格>100，更改为100，否则不变
-
-    4、编写类A03，实现数组的复制功能copyArr，输入旧数组，返回一个新数组，元素和旧数组一样
-
     5、定义一个圆类Circle，定义属性：半径，提供显示圆周长功能的方法，提供显示圆面积的方法
 
     6、编程创建一个Cale计算类，在其中定义2个变量表示两个操作数，定义四个方法实现求和、差、乘、商（要求除数为0的话，要提示）
@@ -80,23 +74,71 @@ public class HomeWork03 {
     /*
     * 1、编写类A01，定义方法max，实现求某个double数组的最大值，并返回。
     * */
-    public static class A01 {
+/*    public static class A01 {
         public double max(double[] array) {
-            double max = 0;
+            double min = 0;
             for (int  i = 0; i < array.length - 1;i++) {
                 for (int j = 0; j < array.length - 1 - i; j++) {
                     //比较数组中元素的大小，返回最大的那个值
-                    if (array[j] > array[j+1]) {
-                        max = array[j];
-                    }
-
+                    if (array[j] < array[j+1]) {
+                        min = array[j];
+                        array[j] = array[j+1];
+                        array[j+1] = min;
+                      }
+                }
             }
+                return array[0];
+        }*/
 
+    /*
+    * 2、编写类A02，定义方法find，实现查找某字符串是否在数组中，并返回索引，如果找不到，返回-1
+    * */
+/*    public  class A02 {
+        public int find(String[] strArray) {
+            //创建Scanner输入要查询的字符串
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("请输入要查询的字符串：");
+            String str = scanner.next();
+
+            //遍历该字符串数组
+            for (int i = 0; i < strArray.length; i++) {
+                if (strArray[i].equals(str)) {
+                    return i;
+                }
             }
-            return max;
-        }
+            return -1;
+        }*/
 
-    }
+        /*
+        *    3、编写类book，定义方法updatePrice，实现更改某本书的价格。具体：如果价格>150,则更改为150，如果价格>100，更改为100，否则不变
+        *  */
+/*        public class book {
+            public int updatePrice(int price) {
+                if (price > 150) {
+                    price = 150;
+                    return price;
+                }else if (price > 100 && price < 150) {
+                    price = 100;
+                    return price;
+                }
+                return price;
+            }
+    }*/
 
+        /*
+        *     4、编写类A03，实现数组的复制功能copyArr，输入旧数组，返回一个新数组，元素和旧数组一样
+        * */
+/*        public class A03 {
+            public int[] copyArr(int[] array) {
+                int[] newArray = new int[array.length];
+                for (int i = 0,j = 0; i < array.length; i++,j++) {
+                   newArray[j] = array[i];
+                }
+                System.out.println(array.hashCode());
+                array  = newArray;
+                System.out.println(array.hashCode());
+                return array;
+            }
+        }*/
 
 }
