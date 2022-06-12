@@ -97,7 +97,7 @@ public class TestProgram {
 //        spe.close();
 
 //       homewor03的实例  3
-//        System.out.println(new HomeWork03().new Book().updatePrice(50));
+//        System.out.println(new HomeWork03().new Book().updatePrice(550));
 
 //       homewor03的实例  4
 //        int[] oldArray = {1,3,5,7,9};
@@ -126,9 +126,9 @@ public class TestProgram {
 //        hwDog.show("小白","白色",1);
 
 //       homewor03的实例  8
-//        new HomeWork03.Test();
+//        new HomeWork03.Test().count1();//10
 //        HomeWork03.Test t1 = new HomeWork03.Test();
-//        t1.count1();//10
+//        t1.count2();//9
 //        t1.count2();//10
 
 //       homewor03的实例  9
@@ -148,7 +148,7 @@ public class TestProgram {
 //        System.out.println(hw.method(hw.method(10.0,20.0),100));
 
 //       homewor03的实例  12
-//        HomeWork03.Employee hw = new HomeWork03().new Employee("黑洋葱","男",20,"程序员",1000);
+        HomeWork03.Employee hw = new HomeWork03().new Employee("黑洋葱",'男',20,"程序员",1000);
 
 //       homewor03的实例  13
 //            HomeWork03.Circle2 hwC2 = new HomeWork03().new Circle2();
