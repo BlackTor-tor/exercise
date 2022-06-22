@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class PolymExercise {
     void inherit() {
         System.out.println("父类的继承方法");

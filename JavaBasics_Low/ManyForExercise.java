@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class ManyForExercise {
     public void manyForExercise() {
 

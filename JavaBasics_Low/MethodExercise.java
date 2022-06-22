@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class MethodExercise {
     int a = 0;
     public void m1() {

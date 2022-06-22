@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class ForExercise {
     public void forExercise(){
         int sum = 0;

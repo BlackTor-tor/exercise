@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 import java.util.Scanner;
 
 public class WhileExercise {

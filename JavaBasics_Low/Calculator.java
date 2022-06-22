@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package JavaBasics_Low;
 
 public class Calculator {
     //加法（整数）

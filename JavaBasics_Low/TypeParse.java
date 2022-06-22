@@ -1,4 +1,6 @@
- public class TypeParse{
+package JavaBasics_Low;
+
+public class TypeParse{
 //    public static void main(String[] args) {
 //        String s = "55667788";
         // char c1 = 'A';//²»Ö§³Öchar×Ö·û

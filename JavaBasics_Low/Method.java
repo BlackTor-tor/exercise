@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class Method {
     //判断奇数还是偶数
     public boolean isOdd(int number) {

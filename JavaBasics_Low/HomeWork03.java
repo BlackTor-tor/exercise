@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
@@ -356,9 +358,9 @@ public class HomeWork03 {
                         private String Stone = "Ê¯Í·";
                         private String Scissor = "¼ôµ¶";
                         private String Cloth = "²¼";
-                        int winTimes;
-                        int lostTimes;
-                        int sameTimes;
+                        public int winTimes;
+                        public int lostTimes;
+                        public int sameTimes;
                     public int getStone() {
                         return stone;
                     }

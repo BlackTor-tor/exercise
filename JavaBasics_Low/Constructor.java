@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class Constructor {
     String name = "小萝莉";//常量池里有个小萝莉的值
     /*

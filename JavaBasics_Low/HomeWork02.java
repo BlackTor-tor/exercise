@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class HomeWork02 {
     public void homeWork02() {
         /*1、下面数组定义正确的有：B、D

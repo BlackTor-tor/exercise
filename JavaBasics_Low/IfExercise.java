@@ -1,7 +1,5 @@
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+package JavaBasics_Low;
+
 public class IfExercise {
 
     private static int adultPrice = 60 ;

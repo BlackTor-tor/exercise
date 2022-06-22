@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class RecursionExercise {
     //ì³ÄÇ²¨ÆõÊý
     public  int  fibonacciNum(int i) {

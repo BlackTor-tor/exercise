@@ -1,6 +1,8 @@
+package TestRun;
+
 import java.lang.reflect.InvocationTargetException;
 
-public class TestProgram {
+public class JavaBasics_Low_Test {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
         //ForExercise.java的实例
 //        new ForExercise()..ForExercise();
@@ -148,7 +150,7 @@ public class TestProgram {
 //        System.out.println(hw.method(hw.method(10.0,20.0),100));
 
 //       homewor03的实例  12
-        HomeWork03.Employee hw = new HomeWork03().new Employee("黑洋葱",'男',20,"程序员",1000);
+//        HomeWork03.Employee hw = new HomeWork03().new Employee("黑洋葱",'男',20,"程序员",1000);
 
 //       homewor03的实例  13
 //            HomeWork03.Circle2 hwC2 = new HomeWork03().new Circle2();
@@ -156,7 +158,7 @@ public class TestProgram {
 //            hwPO.printAreas(hwC2,10);
 
 //       homewor03的实例  14
-//        Class c = Class.forName("HomeWork03$Person$Computer");//获取内部类
+//            Class c = Class.forName("JavaBasics_Low.HomeWork03$Person$Computer");//获取内部类
 //            HomeWork03.Person.Computer computer = new HomeWork03().new Person().new Computer();
 //            HomeWork03.Person tom = new HomeWork03().new Person();
 ////            tom.fingerGuessGame(tom.getCloth(),computer);
@@ -171,4 +173,10 @@ public class TestProgram {
 
     }
 }
+//测试同类中的类
+//class study {
+//    public void daka() {
+//        System.out.println("滴，打卡");
+//    }
+//}
 

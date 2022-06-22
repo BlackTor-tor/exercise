@@ -1,4 +1,5 @@
-import java.util.Scanner;
+package JavaBasics_Low;
+
 public class SwitchExercise {
 
 //	public static void main(String[] args) {

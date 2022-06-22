@@ -1,3 +1,4 @@
+package JavaBasics_Low;
 
 public class MyPrintStar {
     public void myPrintStar() {

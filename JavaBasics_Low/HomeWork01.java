@@ -1,3 +1,5 @@
+package JavaBasics_Low;
+
 public class HomeWork01 {
     public void homeWork01() {
         /*1、某人有100,000元，每经过一次路口，需要交费，规则如下：
