@@ -9,7 +9,4 @@ package TestRun;
 public class JavaBasics_High_Test {
 
 
-    public void a1() {
-
-    }
 }
