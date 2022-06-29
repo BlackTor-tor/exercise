@@ -55,12 +55,35 @@ public class JavaBasics_Mid_Test {
         }*/
 
         //HomeWork的实例 3
-        HomeWork.Teacher zhang = new HomeWork().new Instructor("张老师",22,"讲师",3000,1.1);
-        HomeWork.Teacher li = new HomeWork().new ViceProfessor("李老师",30,"副教授",5000,1.2);
-        HomeWork.Teacher wang = new HomeWork().new Professor("王老师",40,"教授",10000,1.3);
-        System.out.println(zhang.introduce());
-        System.out.println(li.introduce());
-        System.out.println(wang.introduce());
+//        HomeWork.Teacher zhang = new HomeWork().new Instructor("张老师",22,"讲师",3000,1.1);
+//        HomeWork.Teacher li = new HomeWork().new ViceProfessor("李老师",30,"副教授",5000,1.2);
+//        HomeWork.Teacher wang = new HomeWork().new Professor("王老师",40,"教授",10000,1.3);
+//        System.out.println(zhang.introduce());
+//        System.out.println(li.introduce());
+//        System.out.println(wang.introduce());
+
+        //HomeWork的实例 4
+//        HomeWork.Employee normEmp = new HomeWork().new NormEmp("喜羊羊", 100, 30);
+//        HomeWork.Employee departManager = new HomeWork().new DepartManager("村长", 1000, 365);
+//        normEmp.getSalary();
+//        departManager.getSalary();
+
+        //HomeWork的实例 5
+//        HomeWork.Employee2 worker = new HomeWork().new Worker("明工", 5000);
+//        HomeWork.Employee2 peasant = new HomeWork().new Peasant("老明头", 2000);
+//        HomeWork.Employee2 Teacher = new HomeWork().new Teacher2("王老师", 6000,30,250);
+//        HomeWork.Employee2 Scientist = new HomeWork().new Scientist("李博士", 8000,8000);
+//        HomeWork.Employee2 Waiter = new HomeWork().new Waiter("小王服务员", 3000);
+//
+//        worker.yearSal();
+//        peasant.yearSal();
+//        Teacher.yearSal();
+//        Scientist.yearSal();
+//        Waiter.yearSal();
+
+        //HomeWork的实例 7
+        new HomeWork().new Demo().test(); //匿名对象  输出：test、Demo、Rose、jack
+        new HomeWork().new Demo("john").test();//匿名 输出：john、jack
     }
 }
 
