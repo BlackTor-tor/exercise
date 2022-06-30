@@ -82,8 +82,82 @@ public class JavaBasics_Mid_Test {
 //        Waiter.yearSal();
 
         //HomeWork的实例 7
-        new HomeWork().new Demo().test(); //匿名对象  输出：test、Demo、Rose、jack
-        new HomeWork().new Demo("john").test();//匿名 输出：john、jack
+//        new HomeWork().new Demo().test(); //匿名对象  输出：test、Demo、Rose、jack
+//        new HomeWork().new Demo("john").test();//匿名 输出：john、jack
+
+        //HomeWork的实例 8
+//        HomeWork.BankAccount checkingAccount = new HomeWork().new CheckingAccount(1000);
+//        checkingAccount.deposit(20);
+//        System.out.println(checkingAccount.getBalance());
+//        checkingAccount.withdraw(50);
+//        System.out.println(checkingAccount.getBalance());
+        HomeWork.SavingsAccount savingsAccount = new HomeWork().new SavingsAccount(1000);
+        savingsAccount.deposit(500);
+        savingsAccount.deposit(500);
+        savingsAccount.deposit(500);
+        System.out.println(savingsAccount.getBalance());
+        savingsAccount.deposit(500);//第4次存款收取1元手续费
+        System.out.println(savingsAccount.getBalance());//2500+500=3000-1
+        savingsAccount.earnMonthlyInterest();//重置免手续费次数
+        savingsAccount.withdraw(100);
+        savingsAccount.withdraw(100);
+        savingsAccount.withdraw(100);
+        System.out.println(savingsAccount.getBalance());
+        savingsAccount.withdraw(100);//第4次取款收取1元手续费
+        System.out.println(savingsAccount.getBalance());//2699-100=2599 - 1
+
+
+
+
+        //HomeWork的实例 10
+//        HomeWork.Doctor doctor1 = new HomeWork().new Doctor("李医生", 25, "妇科主任", "女", 20000);
+//        HomeWork.Doctor doctor2 = new HomeWork().new Doctor("李医生", 25, "妇科主任", "女", 20000);
+//        HomeWork.Doctor doctor3 = new HomeWork().new Doctor("张医生", 35, "皮肤科副主任", "男", 30000);
+//        HomeWork.Doctor doctor4 = new HomeWork().new Doctor("郑医生", 50, "院长", "男", 100000);
+//        System.out.println(doctor1.equals(doctor2));
+//        System.out.println(doctor3.equals(doctor4));
+
+        //HomeWork的实例 11
+//        HomeWork.Person2 person = new HomeWork().new Student();
+//        person.run();
+//        person.eat();
+//        HomeWork.Student student = (HomeWork.Student) person;
+//        student.study();
+//        student.run();
+//        student.eat();
+
+        //HomeWork的实例 12
+/*        HomeWork.Person3[] people = new HomeWork.Person3[4];
+        people[0] = new HomeWork().new Student2("小明",'男',15,"001");
+        people[1] = new HomeWork().new Student2("小丽",'女',13,"002");
+        people[2] = new HomeWork().new Teacher3("王老师",'男',30,10);
+        people[3] = new HomeWork().new Teacher3("熊老师",'女',25,5);
+        System.out.println("====年龄排序前====");
+        for (HomeWork.Person3 person : people) {
+            System.out.println(person);
+        }
+
+        for (int i = 0; i < people.length; i++) {
+            HomeWork.Person3 person = people[i];
+            if (people[i] != null && people[i] instanceof HomeWork.Student2) {
+//                ((HomeWork.Student2) people[i]).study();
+                ((HomeWork.Student2) people[i]).printInfo();
+            }else if (people[i] != null && people[i] instanceof HomeWork.Teacher3) {
+//                ((HomeWork.Teacher3)people[i]).teach();
+                ((HomeWork.Teacher3)people[i]).printInfo();
+            }else {
+                System.out.println("您的对象有误，请检查");
+            }
+            people[i].highToLowAge(people);
+        }
+        System.out.println("====年龄排序后====");
+        for (HomeWork.Person3 person : people) {
+            System.out.println(person);
+        }*/
+
+        //HomeWork的实例 14
+//        HomeWork.C c = new HomeWork().new C();
+
     }
 }
 
