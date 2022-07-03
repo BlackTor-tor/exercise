@@ -1,7 +1,5 @@
 package JavaBasics_Mid;
 
-import java.util.Objects;
-
 /**
  * @version 1.0
  * @Author tor
@@ -639,19 +637,22 @@ public class HomeWork {
         public void setSal(double sal) {
             this.sal = sal;
         }
-
         @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Doctor doctor = (Doctor) o;
-            return age == doctor.age && Double.compare(doctor.sal, sal) == 0 && Objects.equals(name, doctor.name) && Objects.equals(job, doctor.job) && Objects.equals(gender, doctor.gender);
+        public boolean equals(Object obj) {
+            if (this == obj) { return true;}
+            if (!(obj instanceof Doctor) || obj == null) { return false;}
+            Doctor doctor = (Doctor) obj;
+            return doctor.age == this.age && doctor.name.equals(this.name) && doctor.job.equals(this.job)
+                                                            && doctor.gender.equals(this.gender) && doctor.sal == this.sal;
+
         }
     }
 
     /**
      * 11、现有Person类，里面有方法run、eat、Student类继承了Person类，并重写了run方法，自定义了study方法，
      * 试写出对象向上转型和向下转型的代码，并写出各自都可以调用哪些方法，并写出方法输出什么？
+     * 父类可以调用：person.run();、person.eat();
+     * 子类可以调用：student.study();、student.run();、student.eat();
      */
     public class Person2 {//父类
         public void run() {

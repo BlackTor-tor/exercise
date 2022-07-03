@@ -91,7 +91,7 @@ public class JavaBasics_Mid_Test {
 //        System.out.println(checkingAccount.getBalance());
 //        checkingAccount.withdraw(50);
 //        System.out.println(checkingAccount.getBalance());
-        HomeWork.SavingsAccount savingsAccount = new HomeWork().new SavingsAccount(1000);
+/*        HomeWork.SavingsAccount savingsAccount = new HomeWork().new SavingsAccount(1000);
         savingsAccount.deposit(500);
         savingsAccount.deposit(500);
         savingsAccount.deposit(500);
@@ -104,18 +104,17 @@ public class JavaBasics_Mid_Test {
         savingsAccount.withdraw(100);
         System.out.println(savingsAccount.getBalance());
         savingsAccount.withdraw(100);//第4次取款收取1元手续费
-        System.out.println(savingsAccount.getBalance());//2699-100=2599 - 1
-
-
-
+        System.out.println(savingsAccount.getBalance());//2699-100=2599 - 1*/
 
         //HomeWork的实例 10
-//        HomeWork.Doctor doctor1 = new HomeWork().new Doctor("李医生", 25, "妇科主任", "女", 20000);
-//        HomeWork.Doctor doctor2 = new HomeWork().new Doctor("李医生", 25, "妇科主任", "女", 20000);
-//        HomeWork.Doctor doctor3 = new HomeWork().new Doctor("张医生", 35, "皮肤科副主任", "男", 30000);
-//        HomeWork.Doctor doctor4 = new HomeWork().new Doctor("郑医生", 50, "院长", "男", 100000);
+        HomeWork.Doctor doctor1 = new HomeWork().new Doctor("李医生", 25, "妇科主任", "女", 20000);
+        HomeWork.Doctor doctor2 = new HomeWork().new Doctor("李医生", 25, "妇科主任", "女", 20000);
+        HomeWork.Doctor doctor3 = new HomeWork().new Doctor("张医生", 35, "皮肤科副主任", "男", 30000);
+        HomeWork.Doctor doctor4 = new HomeWork().new Doctor("郑医生", 50, "院长", "男", 100000);
 //        System.out.println(doctor1.equals(doctor2));
 //        System.out.println(doctor3.equals(doctor4));
+//        doctor1 = doctor2;
+//        System.out.println(doctor1 == doctor2);
 
         //HomeWork的实例 11
 //        HomeWork.Person2 person = new HomeWork().new Student();
