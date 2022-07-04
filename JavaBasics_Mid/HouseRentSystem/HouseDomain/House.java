@@ -7,20 +7,12 @@ package JavaBasics_Mid.HouseRentSystem.HouseDomain;
  * @注释  房屋实体类
  */
 public class House {
-    private int houseId;
+    private int houseId = 1;
     private String houseName;
     private String housePhone;
     private String houseAddress;
     private double houseMoney;
     private String state;
-
-    public House(String houseName, String housePhone, String houseAddress, double houseMoney, String state) {
-        this.houseName = houseName;
-        this.housePhone = housePhone;
-        this.houseAddress = houseAddress;
-        this.houseMoney = houseMoney;
-        this.state = state;
-    }
 
     public int getHouseId() {
         return houseId;
