@@ -1,6 +1,5 @@
 package JavaBasics_Mid.HouseRentSystem.HouseView;
 
-import JavaBasics_Mid.HouseRentSystem.HouseDomain.House;
 import JavaBasics_Mid.HouseRentSystem.HouseService.HouseService;
 import JavaBasics_Mid.HouseRentSystem.Tools.Utool;
 
@@ -74,13 +73,11 @@ public class HouseView {
      **/
     public void showHouse() {
         System.out.println("------------------房 屋 列 表------------------");
-        for (int i = 0; i < houseService.houseList().length; i++) {
+            for (int i = 0; i < houseService.houseList().length; i++) {
                 if (houseService.houseList()[i] == null) {
-                    System.out.println("目前暂无房源，请新增。");
-
-                }else {
-                    System.out.println(houseService.houseList()[i]);
+                    break;
                 }
+                    System.out.println(houseService.houseList()[i]);
 
             }
     }
