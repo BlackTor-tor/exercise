@@ -46,7 +46,7 @@ public class HouseView {
                     showHouseList();
                     break;
                 case '2':
-                    System.out.println(2);
+                    findHouse();
                     break;
                 case '3':
                     System.out.println(3);
@@ -66,13 +66,60 @@ public class HouseView {
 
     /**
      * @Author: tor
-     * @Description: 显示房屋列表
+     * @Description: 1 新增房源菜单
+     * @Date: 2022/7/3 19:05
+     * @Params:
+     * @Return: void
+     **/
+    public void showHouseList() {
+        System.out.println("------------------正在新增房源中------------------");
+        houseService.addHouse();
+    }
+
+    /**
+     * @Author: tor
+     * @Description: 2 查找房屋信息
+     * @Date: 2022/7/6 11:44
+     * @Params:
+     * @Return: void
+     **/
+    public void findHouse() {
+        System.out.println("------------------房 屋 列 表------------------");
+        System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+        System.out.println("你需要根据什么条件来查找房屋信息，目前仅支持根据编号、地址和状态，其它暂不支持，请输入你要查询的条件");
+        System.out.println("根据编号查找(按回车跳过)：");
+        int tempId = Utool.readInt(-1);
+        if (tempId == -1) {
+            System.out.println("根据地址查找(按回车跳过)：");
+            String tempAddress = Utool.readString(20, "");
+            if (tempAddress.equals("")) {
+                System.out.println("根据房屋状态查找：");
+                String tempState = Utool.readString(3);
+                System.out.println("------------------房 屋 列 表------------------");
+                System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+                System.out.println(houseService.findByState(tempState));
+            }else {
+                System.out.println("------------------房 屋 列 表------------------");
+                System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+                System.out.println(houseService.findByAddress(tempAddress));
+            }
+        }else {
+            System.out.println("------------------房 屋 列 表------------------");
+            System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+            System.out.println(houseService.findById(tempId));
+        }
+    }
+
+    /**
+     * @Author: tor
+     * @Description: 5 显示房屋列表
      * @Date: 2022/7/3 19:05
      * @Params: []
      * @Return: void
      **/
     public void showHouse() {
         System.out.println("------------------房 屋 列 表------------------");
+        System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
             for (int i = 0; i < houseService.houseList().length; i++) {
                 if (houseService.houseList()[i] == null) {
                     break;
@@ -84,15 +131,5 @@ public class HouseView {
 
 
 
-    /**
-     * @Author: tor
-     * @Description: 显示主菜单
-     * @Date: 2022/7/3 19:05
-     * @Params: []
-     * @Return: void
-     **/
-    public void showHouseList() {
-        System.out.println("------------------正在新增房源中------------------");
-        houseService.addHouse();
-    }
+
 }
