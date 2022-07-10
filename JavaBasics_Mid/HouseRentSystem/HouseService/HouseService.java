@@ -49,7 +49,7 @@ public class HouseService {
             }
         }
 
-        if (initHouseNum == 2 ) {//房屋上限最多2个
+        if (initHouseNum == 2) {//房屋上限最多2个
             System.out.println("房屋列表已满，无法继续新增");
             System.out.println("新增房源失败！");
             return;
@@ -61,9 +61,9 @@ public class HouseService {
         houses[initHouseNum].setHousePhone(Utool.readString(11));
         System.out.println("请输入你要出租的房屋地址：");
         houses[initHouseNum].setHouseAddress(Utool.readString(20));
-        System.out.println("请输入你要出租的房屋租金");
+        System.out.println("请输入你要出租的房屋租金：");
         houses[initHouseNum].setHouseMoney(Utool.readInt());
-        System.out.println("请输入你要出租的房屋状态(已/未出租)");
+        System.out.println("请输入你要出租的房屋状态(已/未出租)：");
         houses[initHouseNum].setState(Utool.readString(3));
 
         System.out.println("输入完成，请确认是否提交");
@@ -88,7 +88,7 @@ public class HouseService {
      **/
     public House findById(int houseId) {
         for (int i = 0; i < houses.length; i++) {
-            if (houses[i].getHouseId() == houseId){
+            if (houses[i] != null && houses[i].getHouseId() == houseId) {
                 return houses[i];
             }
         }
@@ -104,7 +104,7 @@ public class HouseService {
      **/
     public House findByAddress(String houseAddress) {
         for (int i = 0; i < houses.length; i++) {
-            if (houses[i].getHouseAddress().equals(houseAddress)){
+            if (houses[i] != null && houses[i].getHouseAddress().equals(houseAddress)) {
                 return houses[i];
             }
         }
@@ -120,11 +120,88 @@ public class HouseService {
      **/
     public House findByState(String state) {
         for (int i = 0; i < houses.length; i++) {
-            if (houses[i].getState().equals(state)){
+            if (houses[i] != null && houses[i].getState().equals(state)) {
                 return houses[i];
             }
         }
         return null;
+    }
+
+    /**
+     * @Author: tor
+     * @Description: 3 删除房屋信息  （根据编号）
+     * @Date: 2022/7/10 12:11
+     * @Params: []
+     * @Return: void
+     **/
+    public String delHouse(int houseId) {
+        for (int i = 0; i < houses.length; i++) {
+            if (houses[i] != null && houses[i].getHouseId() == houseId) {
+                houses[i] = null;//根据拿到的索引去删除元素，索引不等于编号
+                initHouseNum--;
+                return "删除成功";
+            }
+        }
+        return "删除失败，此房屋编号不存在";
+    }
+
+    public void updateHouse() {
+        do {
+            System.out.println("请输入要修改的原房屋编号(按回车退出)：");
+            int houseId = Utool.readInt(-1);
+
+            if (houseId == -1) {
+                return;
+            } else {
+                for (int i = 0; i < houses.length; i++) {
+                    if (houses[i] != null && houseId == houses[i].getHouseId()) {
+                        System.out.println("请输入新的编号(按回车跳过)：");
+                        int temp = Utool.readInt(-1);
+                        if (temp == -1) {
+                        }else {
+                            houses[i].setHouseId(temp);//改房屋编号
+                        }
+                        System.out.println("请输入新的地址(按回车跳过)：");
+                        String houseName = Utool.readString(20,"");
+                        if (houseName.equals("")) {
+                        }else {
+                            houses[i].setHouseName(houseName);//改房屋标题
+                        }
+                        System.out.println("请输入新的联系电话(按回车跳过)：");
+                        String housePhone = Utool.readString(11, "");
+                        if (housePhone.equals("")) {
+                        }else {
+                            houses[i].setHousePhone(housePhone);//改联系电话
+                        }
+                        System.out.println("请输入新的地址(按回车跳过)：");
+                        String houseAddress = Utool.readString(20, "");
+                        if (houseAddress.equals("")) {
+                        }else {
+                            houses[i].setHouseAddress(houseAddress);//改房屋地址
+                        }
+                        System.out.println("请输入新的租金(按回车跳过)：");
+                        double houseMoney = Utool.readInt(-1);
+                        if (houseMoney == -1) {
+                        }else {
+                            houses[i].setHouseMoney(houseMoney);//改房屋租金
+                        }
+                        System.out.println("请输入新的状态(至少修改一项，若放弃直接按回车退出)：");
+                        String state = Utool.readString(3, "");
+                        if (state.equals("")) {
+                            return;
+                        }else {
+                            houses[i].setState(state);//改房屋状态
+                        }
+                        break;
+                    }else {
+                        System.out.println("你输入的编号不存在，请重新输入。");
+                        break;
+                    }
+                }
+            }
+            System.out.println("修改成功");
+            return;
+        }while (true);
     }
 
     /**

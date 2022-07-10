@@ -49,10 +49,10 @@ public class HouseView {
                     findHouse();
                     break;
                 case '3':
-                    System.out.println(3);
+                    delMenu();
                     break;
                 case '4':
-                    System.out.println(4);
+                    updateMenu();
                     break;
                 case '5':
                     showHouse();
@@ -84,30 +84,101 @@ public class HouseView {
      * @Return: void
      **/
     public void findHouse() {
+        int tempId; //保存输入的房屋编号
+        String tempAddress; //保存输入的房屋地址
+
         System.out.println("------------------房 屋 列 表------------------");
         System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
-        System.out.println("你需要根据什么条件来查找房屋信息，目前仅支持根据编号、地址和状态，其它暂不支持，请输入你要查询的条件");
-        System.out.println("根据编号查找(按回车跳过)：");
-        int tempId = Utool.readInt(-1);
-        if (tempId == -1) {
-            System.out.println("根据地址查找(按回车跳过)：");
-            String tempAddress = Utool.readString(20, "");
-            if (tempAddress.equals("")) {
-                System.out.println("根据房屋状态查找：");
-                String tempState = Utool.readString(3);
-                System.out.println("------------------房 屋 列 表------------------");
-                System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
-                System.out.println(houseService.findByState(tempState));
-            }else {
-                System.out.println("------------------房 屋 列 表------------------");
-                System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
-                System.out.println(houseService.findByAddress(tempAddress));
+        System.out.println("你需要根据什么条件来查找房屋信息，目前仅支持根据编号、地址和状态，其它暂不支持。");
+        System.out.println("请选择你要查询的条件(1.编号/2.地址/3.状态/4.退出)：");
+
+        do {
+            switch (Utool.readMenuSelection1_4()) {
+                case '1':
+                    //1、根据编号查找房屋信息
+                    do {
+                        System.out.println("根据编号查找(按回车退出查询)：");
+                        tempId = Utool.readInt(-1);
+                        if (tempId == -1) {
+                            break;
+                        } else {
+                            System.out.println("------------------房 屋 列 表------------------");
+                            System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+                            if (houseService.findById(tempId) != null) {
+                                System.out.println(houseService.findById(tempId));
+                                break;
+                            } else {
+                                System.out.println("对不起，你要查找的房屋编号不存在。请重新输入");
+                            }
+                        }
+                    } while (true);
+                    break;
+                case '2':
+                    //2、根据地址查找房屋信息
+                    do {
+                        System.out.println("根据地址查找(按回车退出查询)：");
+                        tempAddress = Utool.readString(20, "");
+                        if (tempAddress.equals("")) {
+                            break;
+                        } else {
+                            System.out.println("------------------房 屋 列 表------------------");
+                            System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+                            if (houseService.findByAddress(tempAddress) != null) {
+                                System.out.println(houseService.findByAddress(tempAddress));
+                                break;
+                            } else {
+                                System.out.println("对不起，你所查找的房屋地址暂时没有相关房屋信息。请重新输入");
+                            }
+                        }
+                    } while (true);
+                    break;
+                case '3':
+                    //3、根据房屋状态查找房屋信息
+                    do {
+                        System.out.println("根据房屋状态查找(按回车退出查询)：");
+                        String tempState = Utool.readString(3, "");
+                        if (houseService.findByState(tempState) != null) {
+                            System.out.println("------------------房 屋 列 表------------------");
+                            System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
+                            System.out.println(houseService.findByState(tempState));
+                            break;
+                        }
+                        if (tempState == "") {
+                            break;
+                        } else {
+                            System.out.println("对不起，你所查找的房屋状态暂时没有相关房屋信息。请重新输入");
+                        }
+                    } while (true);
+                    break;
+                case '4':
+                    break;
             }
-        }else {
-            System.out.println("------------------房 屋 列 表------------------");
-            System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
-            System.out.println(houseService.findById(tempId));
-        }
+            break;
+        } while (isexit);
+    }
+
+    /**
+     * @Author: tor
+     * @Description:  3 删除房屋菜单
+     * @Date: 2022/7/10 15:15
+     * @Params: []
+     * @Return: void
+     **/
+    public void delMenu() {
+        System.out.println("------------------正在删除房源中------------------");
+        do {
+            System.out.println("请输入你要删除的房屋编号(按回车退出删除房屋菜单)：");
+            int houseId = Utool.readInt(-1);
+            if (houseId == -1) {
+                return;
+            }
+            System.out.println(houseService.delHouse(houseId));
+        } while (true);
+    }
+
+    public void updateMenu() {
+        System.out.println("------------------正在修改房源中------------------");
+        houseService.updateHouse();
     }
 
     /**
@@ -120,16 +191,14 @@ public class HouseView {
     public void showHouse() {
         System.out.println("------------------房 屋 列 表------------------");
         System.out.print("房屋编号\t\t" + "房屋标题\t\t" + "联系电话\t\t" + "地址\t\t" + "租金\t\t" + "房屋状态\n");
-            for (int i = 0; i < houseService.houseList().length; i++) {
-                if (houseService.houseList()[i] == null) {
-                    break;
-                }
-                    System.out.println(houseService.houseList()[i]);
-
+        for (int i = 0; i < houseService.houseList().length; i++) {
+            if (houseService.houseList()[i] == null) {
+                break;
             }
+            System.out.println(houseService.houseList()[i]);
+
+        }
     }
-
-
 
 
 }

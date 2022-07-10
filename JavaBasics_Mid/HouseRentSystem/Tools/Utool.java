@@ -33,6 +33,19 @@ public class Utool {
         return c;
     }
 
+    public static char readMenuSelection1_4() {
+        char c;
+        for (; ; ) {
+            String str = readKeyBoard(1, false);//包含一个字符的字符串
+            c = str.charAt(0);//将字符串转换成字符char类型
+            if (c != '1' && c != '2' &&
+                    c != '3' && c != '4') {
+                System.out.print("选择错误，请重新输入：");
+            } else break;
+        }
+        return c;
+    }
+
 	/**
 	 * 功能：读取键盘输入的一个字符
 	 * @return 一个字符

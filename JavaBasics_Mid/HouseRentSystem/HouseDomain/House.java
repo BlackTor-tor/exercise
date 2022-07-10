@@ -64,11 +64,11 @@ public class House {
 
     @Override
     public String toString() {
-        return  "\t" + houseId +
-                "\t\t" + houseName +
-                "\t\t" + housePhone +
-                "\t\t\t" + houseAddress +
-                "\t" + houseMoney +
-                "\t" + state;
+        return  "\t\t" + houseId +
+                    "\t\t\t" + houseName +
+                    "\t\t\t" + housePhone +
+                    "\t\t\t\t" + houseAddress +
+                    "\t" + houseMoney +
+                    "\t\t" + state;
     }
 }
