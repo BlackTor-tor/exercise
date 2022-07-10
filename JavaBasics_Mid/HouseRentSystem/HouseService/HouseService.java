@@ -172,18 +172,21 @@ public class HouseService {
                         if (housePhone.equals("")) {
                         }else {
                             houses[i].setHousePhone(housePhone);//改联系电话
+                            System.out.println("修改成功");
                         }
                         System.out.println("请输入新的地址(按回车跳过)：");
                         String houseAddress = Utool.readString(20, "");
                         if (houseAddress.equals("")) {
                         }else {
                             houses[i].setHouseAddress(houseAddress);//改房屋地址
+                            System.out.println("修改成功");
                         }
                         System.out.println("请输入新的租金(按回车跳过)：");
                         double houseMoney = Utool.readInt(-1);
                         if (houseMoney == -1) {
                         }else {
                             houses[i].setHouseMoney(houseMoney);//改房屋租金
+                            System.out.println("修改成功");
                         }
                         System.out.println("请输入新的状态(至少修改一项，若放弃直接按回车退出)：");
                         String state = Utool.readString(3, "");
@@ -191,6 +194,7 @@ public class HouseService {
                             return;
                         }else {
                             houses[i].setState(state);//改房屋状态
+                            System.out.println("修改成功");
                         }
                         break;
                     }else {
@@ -199,8 +203,6 @@ public class HouseService {
                     }
                 }
             }
-            System.out.println("修改成功");
-            return;
         }while (true);
     }
 
