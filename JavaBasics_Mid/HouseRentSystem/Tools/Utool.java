@@ -107,6 +107,30 @@ public class Utool {
     }
 
     /**
+     * 功能：读取键盘输入的小数或默认值，如果直接回车，则返回默认值，否则返回输入的小数
+     * @param defaultValue 指定的默认值
+     * @return 小数或默认值
+     */
+    public static double readDouble(double defaultValue) {
+        double n;
+        for (; ; ) {
+            String str = readKeyBoard(10, true);
+            if (str.equals("")) {
+                return defaultValue;
+            }
+
+            //异常处理...
+            try {
+                n = Integer.parseInt(str);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.print("数字输入错误，请重新输入：");
+            }
+        }
+        return n;
+    }
+
+    /**
      * 功能：读取键盘输入的指定长度的字符串
      * @param limit 限制的长度
      * @return 指定长度的字符串

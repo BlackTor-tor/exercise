@@ -1,5 +1,6 @@
 package JavaBasics_Mid.HouseRentSystem.HouseView;
 
+import JavaBasics_Mid.HouseRentSystem.HouseDomain.House;
 import JavaBasics_Mid.HouseRentSystem.HouseService.HouseService;
 import JavaBasics_Mid.HouseRentSystem.Tools.Utool;
 
@@ -159,7 +160,7 @@ public class HouseView {
 
     /**
      * @Author: tor
-     * @Description:  3 删除房屋菜单
+     * @Description: 3 删除房屋菜单
      * @Date: 2022/7/10 15:15
      * @Params: []
      * @Return: void
@@ -176,9 +177,45 @@ public class HouseView {
         } while (true);
     }
 
+    /**
+     * @Author: tor
+     * @Description:  4 修改房屋信息
+     * @Date: 2022/7/11 22:05
+     * @Params: []
+     * @Return: void
+     **/
     public void updateMenu() {
         System.out.println("------------------正在修改房源中------------------");
-        houseService.updateHouse();
+        do {
+            System.out.println("请输入要修改的房屋编号(按回车放弃修改)：");
+            int houseId = Utool.readInt(-1);
+            if (houseId == -1) {
+                return;
+            }
+            House house = houseService.findById(houseId);
+            if (house != null) {
+                System.out.println("原房屋编号" + houseId + "信息如下");
+                System.out.println("房屋标题：" + house.getHouseName());
+                System.out.print("请输入要修改的新的房屋标题：(按回车默认不修改原来的信息)");
+                house.setHouseName(Utool.readString(20,house.getHouseName()));
+                System.out.println("原联系电话：" + house.getHousePhone());
+                System.out.print("请输入要修改的新的联系电话：(按回车默认不修改原来的信息)");
+                house.setHousePhone(Utool.readString(11,house.getHousePhone()));
+                System.out.println("原地址：" + house.getHouseAddress());
+                System.out.print("请输入要修改的新的地址：(按回车默认不修改原来的信息)");
+                house.setHouseAddress(Utool.readString(20,house.getHouseAddress()));
+                System.out.println("原租金：" + house.getHouseMoney());
+                System.out.print("请输入要修改的新的租金：(按回车默认不修改原来的信息)");
+                house.setHouseMoney(Utool.readDouble(house.getHouseMoney()));
+                System.out.println("原房屋状态：" + house.getState());
+                System.out.print("请输入要修改的新的房屋状态：(按回车默认不修改原来的信息)");
+                house.setState(Utool.readString(3, house.getState()));
+                System.out.println("修改成功");
+                return;
+            } else {
+                System.out.println("该房屋编号不存在，请确认后重新输入");
+            }
+        }while (true);
     }
 
     /**

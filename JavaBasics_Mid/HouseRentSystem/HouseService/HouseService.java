@@ -145,7 +145,15 @@ public class HouseService {
         return "删除失败，此房屋编号不存在";
     }
 
-    public void updateHouse() {
+    /**
+     * @Author: tor
+     * @Description: 4 修改房屋信息
+     * @Date: 2022/7/11 21:36
+     * @Params:
+     * @Return:
+     **/
+    /*public void updateHouse() {
+        //改良一下，直接在view层调用findById方法查找房子，如果有再改，没有则不改。
         do {
             System.out.println("请输入要修改的原房屋编号(按回车退出)：");
             int houseId = Utool.readInt(-1);
@@ -204,7 +212,7 @@ public class HouseService {
                 }
             }
         }while (true);
-    }
+    }*/
 
     /**
      * @Author: tor
