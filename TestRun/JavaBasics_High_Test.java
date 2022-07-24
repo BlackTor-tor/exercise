@@ -1,5 +1,7 @@
 package TestRun;
 
+import javaBasics_High.DesignMode.Single;
+
 /**
  * @version 1.0
  * @Author tor
@@ -20,13 +22,13 @@ public class JavaBasics_High_Test {
         }*/
 //        JavaBasics_High_Test.main(new String[]{"11", "22"});//会报errorOutstanding错误，栈溢出
     public static void main(String[] args) {
-
-
+        //StaticExercise的实例
+//        System.out.println(StaticExercise.s);
+        //Single的实例
+        Single.Single_Hunger();
+        Single.Single_Lazy();
 
 
     }
-
-
-
 }
 
