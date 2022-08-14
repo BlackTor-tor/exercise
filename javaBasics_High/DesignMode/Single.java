@@ -10,13 +10,13 @@ public class Single {
     public static void Single_Hunger() {
         //饿汉式
         //只能这样去获取一个单例模式类的对象的实例
-        BlackTor_Hunger blackTor_hunger = BlackTor_Hunger.instance();
-        System.out.println(blackTor_hunger);
+        Hunger hunger = Hunger.instance();
+        System.out.println(hunger);
     }
     public static void Single_Lazy() {
         //懒汉式
-        BlackTor_Lazy blackTor_lazy = BlackTor_Lazy.instance();
-        System.out.println(blackTor_lazy);
+        Lazy lazy = Lazy.instance();
+        System.out.println(lazy);
     }
 }
 
@@ -28,22 +28,22 @@ public class Single {
  * @Params:
  * @Return:
  **/
-class BlackTor_Hunger {
+class Hunger {
     private String name;
     //构造器需要私有化
-    private BlackTor_Hunger(String name) {
+    private Hunger(String name) {
         this.name = name;
     }
     //对象实例也需要私有化，声明为静态的
-    private static BlackTor_Hunger blackTor = new BlackTor_Hunger("黑洋葱饿汉式");
+    private static Hunger blackTor = new Hunger("饿汉式");
     //最后再提供一个公开的静态的实例对象的方法
-    public static BlackTor_Hunger instance() {
+    public static Hunger instance() {
         return blackTor;
     }
 
     @Override
     public String toString() {
-        return "BlackTor_Hunger{" +
+        return "Hunger{" +
                 "name='" + name + '\'' +
                 '}';
     }
@@ -58,24 +58,24 @@ class BlackTor_Hunger {
  * @Params:
  * @Return:
  **/
-class BlackTor_Lazy {
+class Lazy {
     private String name;
     //静态私有实例对象，先不new
-    private static BlackTor_Lazy blackTor_lazy;
+    private static Lazy lazy;
     //提供一个公开的静态获取类实例的方法
-    public static BlackTor_Lazy instance() {
-        if (blackTor_lazy == null) {
-            blackTor_lazy = new BlackTor_Lazy("黑洋葱懒汉式");
+    public static Lazy instance() {
+        if (lazy == null) {
+            lazy = new Lazy("懒汉式");
         }
-        return blackTor_lazy;
+        return lazy;
     }
-    private BlackTor_Lazy(String name) {
+    private Lazy(String name) {
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "BlackTor_Lazy{" +
+        return "Lazy{" +
                 "name='" + name + '\'' +
                 '}';
     }
