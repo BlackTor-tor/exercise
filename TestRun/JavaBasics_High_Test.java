@@ -1,6 +1,6 @@
 package TestRun;
 
-import javaBasics_High.Implements;
+import javaBasics_High.InnerClass;
 
 /**
  * @version 1.0
@@ -35,9 +35,13 @@ public class JavaBasics_High_Test {
 //        new B().print();
 
         //Implements的实例
-        new Implements();
+//        new Implements();
 
-
+        //InnerClass的实例
+        InnerClass innerClass = new InnerClass();
+        System.out.println(innerClass.toString());
+        System.out.println(innerClass.hashCode());
+        System.out.println(innerClass);
 
     }
 }

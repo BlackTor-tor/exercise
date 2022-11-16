@@ -4,7 +4,7 @@ package javaBasics_High;
  * @version 1.0
  * @Author tor
  * @Date 2022/7/24 9:58
- * @×¢ÊÍ
+ * @×¢ÊÍ  ¾²Ì¬Ïà¹Ø
  */
 public class StaticExercise {
     //¾²Ì¬´úÂë¿é
