@@ -1,7 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.Bell;
-import JavaBasics_High.CellPhone;
+import JavaBasics_High.InnerClass;
 
 /**
  * @version 1.0
@@ -39,15 +38,16 @@ public class JavaBasics_High_Test {
 //        new Implements();
 
         //InnerClass的实例
-//        InnerClass innerClass = new InnerClass();
-//        innerClass.innerClassTest();
+        InnerClass innerClass = new InnerClass();
+        innerClass.innerClassTest();
+
 
         //AnonymousClass的实例
 //        AnonymousClass anonymousClass = new AnonymousClass();
 //        anonymousClass.AnonymousTest();
 
         //Bell的实例
-        CellPhone cellPhone = new CellPhone();
+/*        CellPhone cellPhone = new CellPhone();
         cellPhone.alarmclock(new Bell() {
             @Override
             public void ring() {
@@ -59,7 +59,7 @@ public class JavaBasics_High_Test {
             public void ring() {
                 System.out.println("小伙伴上课了");
             }
-        });
+        });*/
     }
 }
 
