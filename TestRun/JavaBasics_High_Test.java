@@ -1,6 +1,7 @@
 package TestRun;
 
-import javaBasics_High.InnerClass;
+import JavaBasics_High.Bell;
+import JavaBasics_High.CellPhone;
 
 /**
  * @version 1.0
@@ -38,11 +39,27 @@ public class JavaBasics_High_Test {
 //        new Implements();
 
         //InnerClass的实例
-        InnerClass innerClass = new InnerClass();
-        System.out.println(innerClass.toString());
-        System.out.println(innerClass.hashCode());
-        System.out.println(innerClass);
+//        InnerClass innerClass = new InnerClass();
+//        innerClass.innerClassTest();
 
+        //AnonymousClass的实例
+//        AnonymousClass anonymousClass = new AnonymousClass();
+//        anonymousClass.AnonymousTest();
+
+        //Bell的实例
+        CellPhone cellPhone = new CellPhone();
+        cellPhone.alarmclock(new Bell() {
+            @Override
+            public void ring() {
+                System.out.println("懒猪起床了");
+            }
+        });
+        cellPhone.alarmclock(new Bell() {
+            @Override
+            public void ring() {
+                System.out.println("小伙伴上课了");
+            }
+        });
     }
 }
 

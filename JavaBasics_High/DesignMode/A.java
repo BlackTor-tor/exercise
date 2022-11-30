@@ -1,4 +1,4 @@
-package javaBasics_High.DesignMode;
+package JavaBasics_High.DesignMode;
 
 /**
  * @version 1.0
@@ -6,9 +6,9 @@ package javaBasics_High.DesignMode;
  * @Date 2022/8/14 20:54
  * @注释
  */
-public class B extends Template{
+public class A extends Template{
     @Override
     public String showSelf() {
-        return "我是B类的showSelf()方法";
+        return "我是A类的showSelf()方法";
     }
 }

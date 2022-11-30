@@ -1,4 +1,4 @@
-package javaBasics_High;
+package JavaBasics_High;
 
 /**
  * @version 1.0

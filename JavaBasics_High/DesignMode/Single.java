@@ -1,4 +1,4 @@
-package javaBasics_High.DesignMode;
+package JavaBasics_High.DesignMode;
 
 /**
  * @version 1.0
