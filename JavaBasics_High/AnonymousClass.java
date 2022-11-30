@@ -18,13 +18,13 @@ public class AnonymousClass {
     public void AnonymousTest() {
 
         //方法1
-        Father father = new Father() {
+        Father_ father = new Father_() {
             public String name;
         };
         father.test();//如果是继承关系的匿名内部类，必须在父类也定义了相同名字的方法，否则父类的对象无法找到。
                             // 但如果不用对象去调用，可以不需要和父类一样，是否使用对象调用还是匿名调用，取决于是否需要用到这个对象
         //方法2
-        new Father() {
+        new Father_() {
             public String name;
             public void test2() {//父类不需要有test2方法
                 System.out.println("匿名内部类的test2方法");
@@ -33,7 +33,7 @@ public class AnonymousClass {
     }
 }
 
-class Father {
+class Father_ {
 //    public Father(String name) {
 //        System.out.println(name);
 //    }

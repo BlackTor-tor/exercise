@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.InnerClass;
+import JavaBasics_High.StaticExercise;
 
 /**
  * @version 1.0
@@ -24,7 +24,8 @@ public class JavaBasics_High_Test {
      }*/
 //        JavaBasics_High_Test.main(new String[]{"11", "22"});//会报errorOutstanding错误，栈溢出
         //StaticExercise的实例
-//        System.out.println(StaticExercise.s);
+//        System.out.println(StaticExercise.d);
+        StaticExercise staticExercise = new StaticExercise();
 
         //Single的实例
 //        Single.Single_Hunger();
@@ -38,8 +39,8 @@ public class JavaBasics_High_Test {
 //        new Implements();
 
         //InnerClass的实例
-        InnerClass innerClass = new InnerClass();
-        innerClass.innerClassTest();
+//        InnerClass innerClass = new InnerClass();
+//        innerClass.innerClassTest();
 
 
         //AnonymousClass的实例

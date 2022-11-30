@@ -13,6 +13,7 @@ public class StaticExercise {
     }
     //静态属性
     public static int s = helloStatic();
+    public static double d = 5.0;
     //静态方法
     private static int helloStatic() {
         System.out.println("我是静态方法");
@@ -25,5 +26,12 @@ public class StaticExercise {
         }
     }
 
+    public void noStatic() {
+        System.out.println(d);
+    }
+
+    public StaticExercise() {
+        System.out.println("静态类的构造器");
+    }
 
 }
