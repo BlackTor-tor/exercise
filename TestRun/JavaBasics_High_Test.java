@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.StaticExercise;
+import JavaBasics_High.EnumExercise;
 
 /**
  * @version 1.0
@@ -25,7 +25,7 @@ public class JavaBasics_High_Test {
 //        JavaBasics_High_Test.main(new String[]{"11", "22"});//会报errorOutstanding错误，栈溢出
         //StaticExercise的实例
 //        System.out.println(StaticExercise.d);
-        StaticExercise staticExercise = new StaticExercise();
+//        StaticExercise staticExercise = new StaticExercise();
 
         //Single的实例
 //        Single.Single_Hunger();
@@ -41,7 +41,6 @@ public class JavaBasics_High_Test {
         //InnerClass的实例
 //        InnerClass innerClass = new InnerClass();
 //        innerClass.innerClassTest();
-
 
         //AnonymousClass的实例
 //        AnonymousClass anonymousClass = new AnonymousClass();
@@ -61,6 +60,10 @@ public class JavaBasics_High_Test {
                 System.out.println("小伙伴上课了");
             }
         });*/
+
+        //EnumExercise的实例
+        System.out.println(EnumExercise.APPLE);
+        System.out.println(EnumExercise.ANDROID);
     }
 }
 
