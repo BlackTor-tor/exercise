@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.EnumExercise;
+import JavaBasics_High.Week;
 
 /**
  * @version 1.0
@@ -8,6 +8,7 @@ import JavaBasics_High.EnumExercise;
  * @Date 2022/6/22 12:47
  * @注释 java高级部分测试类
  */
+@SuppressWarnings("all")
 public class JavaBasics_High_Test {
     public static void main(String[] args) {
     /**关于args的研究，args是专门用来接收命令行参数的。
@@ -62,8 +63,23 @@ public class JavaBasics_High_Test {
         });*/
 
         //EnumExercise的实例
-        System.out.println(EnumExercise.APPLE);
-        System.out.println(EnumExercise.ANDROID);
+        //如果不重写枚举类的toString方法，就会导致用EnumExercise.常量名输出的是常量名
+        // 而不是枚举类所对应的对象中的所有属性，下面这行代码打印的结果是APPLE
+//        System.out.println(EnumExercise.APPLE);
+//        System.out.println(EnumExercise.ANDROID);
+//        EnumExercise EE1 = EnumExercise.APPLE;
+//        EnumExercise EE2 = EnumExercise.ANDROID;
+//        System.out.println(EE1.valueOf("APPL"));//名字不匹配会报java.lang.IllegalArgumentException
+//        System.out.println(EE1.valueOf("APPLE"));//用字符串去匹配枚举类中是否存在与字符串所对应的常量名
+//        System.out.println(Arrays.toString(EnumExercise.values()));//返回的是一个枚举类数组，可以直接用Array.toString打印数组
+//        System.out.println(EE1.ordinal());//打印出APPLE这个常量在枚举类中的定义的次序。输出0
+//        System.out.println(EE1.name());//返回对象名，也就是常量名
+//        System.out.println(EE1.compareTo(EE2));//EE1的次序是0，EE2是1，所以结果等于-1
+//        System.out.println(EE1.equals(EE2));//比较两个枚举对象是否相等
+
+        //Week的实例
+        Week.show();
+
     }
 }
 
