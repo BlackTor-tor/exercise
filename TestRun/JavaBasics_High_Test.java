@@ -1,7 +1,5 @@
 package TestRun;
 
-import JavaBasics_High.Week;
-
 /**
  * @version 1.0
  * @Author tor
@@ -78,7 +76,10 @@ public class JavaBasics_High_Test {
 //        System.out.println(EE1.equals(EE2));//比较两个枚举对象是否相等
 
         //Week的实例
-        Week.show();
+//        Week.show();
+
+
+
 
     }
 }
