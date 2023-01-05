@@ -6,7 +6,7 @@ package JavaBasics_High.DesignMode;
  * @Date 2022/8/14 20:54
  * @注释
  */
-public class A extends Template{
+public class A extends JavaBasics_High.DesignMode.Template {
     @Override
     public String showSelf() {
         return "我是A类的showSelf()方法";
