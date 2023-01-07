@@ -85,7 +85,7 @@ public class HomeWork01 {
     9.将枚举对象在switch语句中匹配使用
 */
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         //一、第一题实例
 //        C c =new C();
 //        C c1=new C(100);
