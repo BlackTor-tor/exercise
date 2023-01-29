@@ -1,5 +1,7 @@
 package TestRun;
 
+import JavaBasics_High.ExceptionExercise;
+
 /**
  * @version 1.0
  * @Author tor
@@ -78,7 +80,8 @@ public class JavaBasics_High_Test {
         //Week的实例
 //        Week.show();
 
-
+        //ExceptionExercise的实例
+        System.out.println(ExceptionExercise.testException());
 
 
     }
