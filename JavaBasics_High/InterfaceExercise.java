@@ -8,8 +8,7 @@ package JavaBasics_High;
  */
 public interface InterfaceExercise {
     //接口的属性
-    String name = "接口";
-
+    String name = "接口";//省略了public static final
     default public void commonMethod() {
         System.out.println("接口的普通方法");
     }
