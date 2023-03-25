@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.ExceptionExercise;
+import JavaBasics_High.HomeWork.EcmDef;
 
 /**
  * @version 1.0
@@ -81,9 +81,16 @@ public class JavaBasics_High_Test {
 //        Week.show();
 
         //ExceptionExercise的实例
-        System.out.println(ExceptionExercise.testException());
+//        System.out.println(ExceptionExercise.testException());
 
+        //CustomException的实例
+//        ExceptionExercise.testAge();
 
+        //EcmDef的实例
+        double[] temp = EcmDef.show();
+        for (int i = 0; i < temp.length - 1; i++) {
+            System.out.println(EcmDef.cal(temp[i], temp[i + 1]));
+        }
     }
 }
 
