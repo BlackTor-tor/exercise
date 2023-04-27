@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.HomeWork.EcmDef;
+import JavaBasics_High.PackClass;
 
 /**
  * @version 1.0
@@ -87,10 +87,17 @@ public class JavaBasics_High_Test {
 //        ExceptionExercise.testAge();
 
         //EcmDef的实例
-        double[] temp = EcmDef.show();
-        for (int i = 0; i < temp.length - 1; i++) {
-            System.out.println(EcmDef.cal(temp[i], temp[i + 1]));
-        }
+//        double[] temp = EcmDef.show();
+//        for (int i = 0; i < temp.length - 1; i++) {
+//            System.out.println(EcmDef.cal(temp[i], temp[i + 1]));
+//        }
+
+//        PackClass的实例
+        PackClass packClass = new PackClass();
+        System.out.println(packClass.inPack());
+        System.out.println(packClass.outPack());
+        System.out.println(packClass.inPack2());
+        System.out.println(packClass.outPack2());
     }
 }
 
