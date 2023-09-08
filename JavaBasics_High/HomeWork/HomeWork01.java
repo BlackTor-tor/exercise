@@ -97,12 +97,12 @@ public class HomeWork01 {
 //        System.out.println(Frock.getNextNum());
 //        System.out.println(Frock.getNextNum());
 //        //6、在TestFrock类(HomeWork01)的main方法中，分别创建三个Frock 对象，并打印三个对象的序列号，验证是否为按100递增。
-//        Frock frock1 = new Frock();
-//        Frock frock2 = new Frock();
-//        Frock frock3 = new Frock();
-//        System.out.println(frock1.getSerialNumber());
-//        System.out.println(frock2.getSerialNumber());
-//        System.out.println(frock3.getSerialNumber());
+        Frock frock1 = new Frock();
+        Frock frock2 = new Frock();
+        Frock frock3 = new Frock();
+        System.out.println(frock1.getSerialNumber());
+        System.out.println(frock2.getSerialNumber());
+        System.out.println(frock3.getSerialNumber());
 
         //三、第三题实例
 //        Animal cat = new Cat();
@@ -148,36 +148,36 @@ public class HomeWork01 {
 
         //八、第八题实例
         //用switch来查找枚举对象值
-        Color black = Color.BLACK;
-        Color blue = Color.BLUE;
-        Color red = Color.RED;
-        Color green = Color.GREEN;
-        Color yellow = Color.YELLOW;
+//        Color black = Color.BLACK;
+//        Color blue = Color.BLUE;
+//        Color red = Color.RED;
+//        Color green = Color.GREEN;
+//        Color yellow = Color.YELLOW;
 //        black.show();
 //        blue.show();
 //        red.show();
 //        green.show();
-        yellow.show();
-        //在switch中放入创建的枚举对象，每个case后面写上枚举类中定义的枚举对象
-        switch (black) {
-            case BLACK :
-                System.out.println("黑色");
-                break;
-            case RED :
-                System.out.println("红色");
-                break;
-            case BLUE :
-                System.out.println("蓝色");
-                break;
-            case GREEN :
-                System.out.println("绿色");
-                break;
-            case YELLOW :
-                System.out.println("黄色");
-                break;
-            default :
-                System.out.println("没有这个颜色");
-        }
+//        yellow.show();
+//        //在switch中放入创建的枚举对象，每个case后面写上枚举类中定义的枚举对象
+//        switch (black) {
+//            case BLACK :
+//                System.out.println("黑色");
+//                break;
+//            case RED :
+//                System.out.println("红色");
+//                break;
+//            case BLUE :
+//                System.out.println("蓝色");
+//                break;
+//            case GREEN :
+//                System.out.println("绿色");
+//                break;
+//            case YELLOW :
+//                System.out.println("黄色");
+//                break;
+//            default :
+//                System.out.println("没有这个颜色");
+//        }
     }
 }
 

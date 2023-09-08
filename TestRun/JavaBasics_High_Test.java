@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.PackClass;
+import JavaBasics_High.testAnnotation;
 
 /**
  * @version 1.0
@@ -93,11 +93,16 @@ public class JavaBasics_High_Test {
 //        }
 
 //        PackClass的实例
-        PackClass packClass = new PackClass();
-        System.out.println(packClass.inPack());
-        System.out.println(packClass.outPack());
-        System.out.println(packClass.inPack2());
-        System.out.println(packClass.outPack2());
+//        PackClass packClass = new PackClass();
+//        System.out.println(packClass.inPack());
+//        System.out.println(packClass.outPack());
+//        System.out.println(packClass.inPack2());
+//        System.out.println(packClass.outPack2());
+
+        //testAnnotation的实例
+        testAnnotation annotation = new testAnnotation();
+        annotation.haha();
+
     }
 }
 
