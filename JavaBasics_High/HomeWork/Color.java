@@ -13,6 +13,7 @@ public enum Color implements TestColor{
     BLACK(0,0,0),
     YELLOW(255,255,0),
     GREEN(0,255,0);
+//    GAXY(0,0,0);
     private int redValue;
     private int greenValue;
     private int blueValue;

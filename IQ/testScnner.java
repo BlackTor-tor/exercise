@@ -1,5 +1,7 @@
 package IQ;
 
+import java.util.Scanner;
+
 /**
  * @version 1.0
  * @Author tor
@@ -8,8 +10,8 @@ package IQ;
  */
 public class testScnner {
     public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        int a = in.nextInt();
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
 //        System.out.println(a);
 //        System.out.println("Hello World");
 //        System.out.println( 1+ "\r" + 2);

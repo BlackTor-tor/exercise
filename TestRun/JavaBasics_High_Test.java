@@ -1,6 +1,6 @@
 package TestRun;
 
-import JavaBasics_High.testAnnotation;
+import JavaBasics_High.ExceptionExercise;
 
 /**
  * @version 1.0
@@ -84,7 +84,7 @@ public class JavaBasics_High_Test {
 //        System.out.println(ExceptionExercise.testException());
 
         //CustomException的实例
-//        ExceptionExercise.testAge();
+        ExceptionExercise.testAge();
 
         //EcmDef的实例
 //        double[] temp = EcmDef.show();
@@ -100,8 +100,10 @@ public class JavaBasics_High_Test {
 //        System.out.println(packClass.outPack2());
 
         //testAnnotation的实例
-        testAnnotation annotation = new testAnnotation();
-        annotation.haha();
+//        testAnnotation annotation = new testAnnotation();
+//        annotation.haha();
+
+
 
     }
 }
