@@ -21,8 +21,7 @@ public class PackClass {
 
     public int outPack() {//拆包
     //2. 手动拆箱
-    number2 = inPack().intValue();
-    return number2;//100
+    return inPack().intValue();//100
     }
 
     //JDK5以后可以实现自动装/拆箱

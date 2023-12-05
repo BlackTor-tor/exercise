@@ -10,8 +10,20 @@ public class Person {
     private String name;
     private Vehicles vehicles;
 
+    public Person() {
+        super();
+    }
+
     public Person(String name, Vehicles vehicles) {
         this.name = name;
+        this.vehicles = vehicles;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setVehicles(Vehicles vehicles) {
         this.vehicles = vehicles;
     }
 
