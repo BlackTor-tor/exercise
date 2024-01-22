@@ -31,9 +31,16 @@ public class StringClass {
         System.out.println(p1.getName().equals(p2.getName()));
         System.out.println(p1.getName() == p2.getName());
         System.out.println(p1.getName() == "tor");
-
-
     }
 
+    /**
+     * String的常用方法
+     *CompareTO
+     */
+    public void CompareString() {
+        String s1 = "hyc";
+        String s2 = "黑洋葱";
+        System.out.println(s1.compareTo(s2));
+    }
 
 }

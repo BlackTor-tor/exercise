@@ -107,7 +107,8 @@ public class JavaBasics_High_Test {
 
         //StringClassµÄÊµÀý
         StringClass stringClass = new StringClass();
-        stringClass.testString2();
+//        stringClass.testString2();
+        stringClass.CompareString();
 
 
     }
