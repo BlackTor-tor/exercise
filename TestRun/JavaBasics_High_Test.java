@@ -1,8 +1,12 @@
 package TestRun;
 
 import JavaBasics_High.ExceptionExercise;
+import JavaBasics_High.HomeWork.ArrayExercise;
 import JavaBasics_High.PackClass;
 import JavaBasics_High.StringClass;
+import JavaBasics_Low.HomeWork03;
+
+import java.util.Comparator;
 
 /**
  * @version 1.0
@@ -106,10 +110,22 @@ public class JavaBasics_High_Test {
 //        annotation.haha();
 
         //StringClass的实例
-        StringClass stringClass = new StringClass();
-//        stringClass.testString2();
-        stringClass.CompareString();
+//        StringClass stringClass = new StringClass();
+////        stringClass.testString2();
+//        stringClass.CompareString();
 
+        //ArrayExercise的实例
+        ArrayExercise arrayExercise = new ArrayExercise();
+        arrayExercise.book();
+
+//        arrayExercise.book2(new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//                ArrayExercise.Book book1 = (ArrayExercise.Book) o1;
+//                ArrayExercise.Book book2 = (ArrayExercise.Book) o2;
+//                return book1 - book2;
+//            }
+//        });
 
     }
 }
