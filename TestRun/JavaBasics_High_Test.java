@@ -1,6 +1,8 @@
 package TestRun;
 
 import JavaBasics_High.HomeWork.ArrayExercise;
+import JavaBasics_High.HomeWork.HomeWork03;
+import JavaBasics_High.StringClass;
 
 import java.util.Comparator;
 
@@ -108,13 +110,18 @@ public class JavaBasics_High_Test {
         //StringClass的实例
 //        StringClass stringClass = new StringClass();
 ////        stringClass.testString2();
-//        stringClass.CompareString();
+//        stringClass.compare();
+//        stringClass.concat();
+//        stringClass.contains();
 
         //ArrayExercise的实例
-        ArrayExercise arrayExercise = new ArrayExercise();
-        arrayExercise.book();
-        arrayExercise.book2();
+//        ArrayExercise arrayExercise = new ArrayExercise();
+//        arrayExercise.book();
+//        arrayExercise.book2();
 
+        //HomeWork03的实例
+//        System.out.println(HomeWork03.reverse("java", 1, 2));
+        System.out.println(new HomeWork03().loginUserNameOrPwdOrEmail("to", 123456, "603543411@qq.com"));
     }
 }
 

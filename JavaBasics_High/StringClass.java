@@ -37,10 +37,21 @@ public class StringClass {
      * String的常用方法
      *CompareTO
      */
-    public void CompareString() {
+    public void compare() {
         String s1 = "hyc";
-        String s2 = "黑洋葱";
+        String s2 = "hyc2";
         System.out.println(s1.compareTo(s2));
+    }
+
+    public void concat() {
+        String s1 = "tor";
+        String s2 = "black";
+        System.out.println(s2.concat(s1));//在s2的后面拼接一个s1
+    }
+
+    public void contains() {
+        String s = "tor";
+        System.out.println(s.contains("aor"));//精确匹配，只要不包含指定字符串中的其中一个值，就返回false
     }
 
 }
